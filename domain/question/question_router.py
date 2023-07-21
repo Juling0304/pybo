@@ -15,7 +15,7 @@ router = APIRouter(
 )
 
 
-@router.get("/list", response_model=question_schema.QuestionList)
+@router.get("/list", response_model=question_schema.QuestionList, status_code=200)
 def question_list(db: Session = Depends(get_db), page: int = 0, size: int = 10):
     total, _question_list = question_crud.get_question_list(db, skip=page*size, limit=size)
 
