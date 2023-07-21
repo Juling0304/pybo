@@ -1,4 +1,4 @@
 ﻿.vscode/launch.json
 __pycache__/
-migrations
+migrations/versions
 frontend/.vscode
