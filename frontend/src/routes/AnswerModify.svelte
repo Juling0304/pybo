@@ -1,10 +1,10 @@
 <script>
+    import { push } from 'svelte-spa-router'
     import fastapi from "../lib/api"
     import Error from "../components/Error.svelte"
-    import { push } from 'svelte-spa-router'
+    import { modify_answer_id } from "../lib/store"
 
-    export let params = {}
-    const answer_id = params.answer_id
+    const answer_id = $modify_answer_id
     
     let error = {detail:[]}
     let question_id = 0
@@ -31,6 +31,7 @@
             }
         )
     }
+
 </script>
 
 <div class="container">

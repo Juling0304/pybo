@@ -1,7 +1,7 @@
 <script>
   import fastapi from "../lib/api"
   import { link } from 'svelte-spa-router'
-  import { page, is_login } from "../lib/store"
+  import { page, is_login, modify_answer_id } from "../lib/store"
   import moment from 'moment/min/moment-with-locales'
   moment.locale('ko')
 
@@ -10,6 +10,7 @@
   // let page = 0
   let total = 0
   $: total_page = Math.ceil(total/size)
+  $modify_answer_id = ""
 
   function get_question_list(_page) {
     let params = {

@@ -16,7 +16,7 @@
     '/user-create': UserCreate,
     '/user-login': UserLogin,
     '/question-modify/:question_id': QuestionModify,
-    '/answer-modify/:answer_id': AnswerModify,
+    '/answer-modify': AnswerModify,
   }
 </script>
 

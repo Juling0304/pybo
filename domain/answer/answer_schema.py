@@ -19,9 +19,13 @@ class Answer(BaseModel):
     create_date: datetime.datetime
     user: User | None
     question_id: int
+    modify_date: datetime.datetime | None = None
 
     class Config:
         from_attributes = True
 
 class AnswerUpdate(AnswerCreate):
+    answer_id: int
+
+class AnswerDelete(BaseModel):
     answer_id: int
